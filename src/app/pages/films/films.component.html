@@ -1,0 +1,17 @@
+<div *ngIf="movies">
+  <div class="card" *ngFor="let movie of movies.results">
+    <img src="../../../assets/img/films/{{ movie.title }}.jpg" class="card-img-top" />
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.title }}</h5>
+      <p class="card-text">Episode: {{ movie.episode_id }}</p>
+      <p class="card-text">Release Date: {{ movie.release_date | date: 'longDate' }}</p>
+      <p class="card-text">Sinopse: {{ movie.opening_crawl }}</p>
+      <p class="card-text">
+        <small class="text-muted">Director: {{ movie.director }}</small>
+        <br />
+        <small class="text-muted">Producer: {{ movie.producer }}</small>
+      </p>
+    </div>
+  </div>
+</div>
+

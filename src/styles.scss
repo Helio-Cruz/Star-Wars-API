@@ -1,0 +1,14 @@
+@import '../src/sass/variables';
+@import '~reset-css/sass/reset';
+@import '../src/sass/mixin';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+ 
+ 
+
+body{
+    margin: 0;
+    background-color: $footer-background;
+    font-family: url('../src/assets/font/star.woff');
+     
+}
