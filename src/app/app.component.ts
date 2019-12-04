@@ -1,14 +1,32 @@
-import { Component } from '@angular/core';
+import { AuthService } from './shared/auth.service';
+import { Component, OnInit } from '@angular/core';
+ 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
 
-  wrapperImg = '../../../assets/img/wrapper.jpg';
+  // wrapperImg = '../../../assets/img/wrapper.jpg';
   back = '../../../assets/img/back.jpg';
 
-  title = 'star-wars-API';
+ // title = 'star-wars-API';
+
+
+
+  showMenu: boolean = false;
+
+  constructor(private authService: AuthService) {
+
+   }
+
+   ngOnInit() {
+     this.authService.showMenuEmitter
+     .subscribe(
+       show => this.showMenu = show
+     );
+   }
+
 }

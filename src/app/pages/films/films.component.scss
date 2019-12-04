@@ -1,3 +1,4 @@
+ 
 .card {
   display: flex;
   position: relative;
@@ -10,4 +11,11 @@
 p {
   text-align: left;
   margin: 0.8em;
+}
+
+.spinner{
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  height: 440px;
 }

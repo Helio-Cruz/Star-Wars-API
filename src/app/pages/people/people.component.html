@@ -34,7 +34,7 @@
           />
           <div class="card-body">
             <h5 class="card-title">{{ people.name | uppercase }}</h5>
-            <p class="card-text">Height: {{ people.height }}</p>
+            <p class="card-text">Height: {{ people.height    }}</p>
             <p class="card-text">Gender: {{ people.gender }}</p>
             <p class="card-text">Hair Color: {{ people.hair_color }}</p>
             <p class="card-text">Skin Color: {{ people.skin_color }}</p>
@@ -46,36 +46,8 @@
     </div>
   </div>
 
-<div *ngIf="isLoading" class="d-flex justify-content-center spinner">
-  <div class="spinner-border" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+<div class="spinner" *ngIf="isLoading" >
+ <app-spin></app-spin>
 </div>
-<nav class="pagination" aria-label="Page navigation example" >
-  <ul class="pagination">
-    <li class="page-item">
-      <a
-        class="page-link"
-        aria-label="Previous"
-        (click)="getPeoplePreviousNext(false)"
-      >
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link">1</a></li>
-    <li class="page-item">
-      <a
-        class="page-link"
-        aria-label="Next"
-        (click)="getPeoplePreviousNext(true)"
-      >
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
  
-
  

@@ -1,3 +1,4 @@
+import { AuthService } from './shared/auth.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from '../../src/app/pages/home/home.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardDetailComponent } from './cards/card-detail/card-detail.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +19,9 @@ import { FilmsComponent } from './pages/films/films.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PaginationComponent } from './shared/pagination/pagination.component';
 import { PeopleDetailComponent } from './pages/people/people-detail/people-detail.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './shared/guards/auth.guards';
+import { SpinComponent } from './spin/spin.component';
  
 
 
@@ -33,6 +37,8 @@ import { PeopleDetailComponent } from './pages/people/people-detail/people-detai
     FilmsComponent,
     PaginationComponent,
     PeopleDetailComponent,
+    LoginComponent,
+    SpinComponent,
 
 
   ],
@@ -43,7 +49,9 @@ import { PeopleDetailComponent } from './pages/people/people-detail/people-detai
     HttpClientModule,
     PaginationModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthService,
+              AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

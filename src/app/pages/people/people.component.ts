@@ -20,6 +20,8 @@ export class PeopleComponent implements OnInit, OnDestroy {
   inscription: Subscription;
   page: number;
   id: number;
+  limit: 10;
+  disabled: boolean;
 
   constructor(private swapiService: SwapiService,
               private http: HttpClient,
@@ -31,7 +33,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
     this.getSwapi();
     this.inscription = this.route.queryParams.subscribe(
       (queryParams: any) => {
-        this.page = +queryParams.page || 0;
+        this.page = +queryParams.page || 1;
       }
     );
   }

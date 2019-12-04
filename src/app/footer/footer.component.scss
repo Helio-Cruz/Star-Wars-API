@@ -1,9 +1,12 @@
- .logo{
-     display: flex;
-     justify-content: center;
-     img{
-         margin: 5px;
-         width: 90px;
-         
-     }
- }
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  img {
+  
+    position: relative;
+    top: .4em;
+    width: 55px;
+     
+  }
+}

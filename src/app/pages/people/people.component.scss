@@ -1,14 +1,12 @@
 @import "./../../../sass/variables";
 @import "./../../../sass/mixin";
 
-
 .content {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 1.5em 0;
+  margin: 1em 0;
 }
-
 
 .card {
   display: flex;
@@ -21,14 +19,13 @@
   }
 }
 
-
 .pagination {
   margin: 1.5em auto;
 }
- 
-.spinner{
-   position: relative;
-   margin-top: 300px;
-   height: 350px;
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  height: 39vh;
 }
- 

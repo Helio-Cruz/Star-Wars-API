@@ -1,41 +1,20 @@
-<!--
-  <div class="navbar">
+<div class="navbar" *ngIf="showMenu">
   <a class="navbar-link" [routerLink]="['home']">home</a>
   <a class="navbar-link" [routerLink]="['people']">people</a>
   <a class="navbar-link" [routerLink]="['films']">films</a>
 </div>
 
--->
-
 <!--
-  <div class="wrapper">
-  <div class="wrapper-content">
-    <img [src]="wrapperImg" alt="" />
-  </div>
-  </div>
--->
 
-<div class="video-loop">
-  <video autoplay loop>
-    <source src="../assets/video/star wars.mp4" type="video/mp4" />
-  </video>
-</div>
-
-<div class="content-app">
-  <div class="content-app--title">
-    <h1>Welcome to the Caracter and Movies Details of Star Wars API</h1>
-  </div>
-  <div class="content-app--navbar">
-    <a class="navbar-link">people</a>
-    <a class="navbar-link">films</a>
-  </div>
-</div>
 <div class="main-app">
-  <img src="../assets/img/star.jpg" alt="">
+  <img src="../assets/img/star.jpg" alt="" />
 </div>
+
+-->
 <div class="main-cards">
   <router-outlet></router-outlet>
 </div>
-<div class="footer">
+
+<div class="footer" *ngIf="showMenu">
   <app-footer></app-footer>
 </div>
