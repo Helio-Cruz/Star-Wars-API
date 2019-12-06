@@ -1,11 +1,11 @@
-import { AuthService } from './shared/auth.service';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
+import { AuthenticationService } from './shared/authentication.service';
+import { AuthService } from './shared/auth.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import { PeopleDetailComponent } from './pages/people/people-detail/people-detai
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './shared/guards/auth.guards';
 import { SpinComponent } from './spin/spin.component';
+import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
  
 
 
@@ -39,6 +41,8 @@ import { SpinComponent } from './spin/spin.component';
     PeopleDetailComponent,
     LoginComponent,
     SpinComponent,
+    RegisterComponent,
+    ProfileComponent,
 
 
   ],
@@ -50,7 +54,8 @@ import { SpinComponent } from './spin/spin.component';
     PaginationModule.forRoot(),
   ],
   providers: [AuthService,
-              AuthGuard
+              AuthGuard,
+              AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

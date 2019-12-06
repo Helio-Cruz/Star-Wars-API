@@ -1,3 +1,4 @@
+import { AuthenticationService } from './shared/authentication.service';
 import { AuthService } from './shared/auth.service';
 import { Component, OnInit } from '@angular/core';
  
@@ -16,17 +17,21 @@ export class AppComponent  implements OnInit {
 
 
 
-  showMenu: boolean = false;
+  // showMenu: boolean = false;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private auth: AuthenticationService) {
 
    }
-
+/*
    ngOnInit() {
      this.authService.showMenuEmitter
      .subscribe(
        show => this.showMenu = show
      );
    }
+  */
+ ngOnInit() {
+
+ }
 
 }
