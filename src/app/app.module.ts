@@ -1,8 +1,9 @@
 
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgModule, } from '@angular/core';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthenticationService } from './shared/authentication.service';
 import { AuthService } from './shared/auth.service';
@@ -10,7 +11,7 @@ import { AuthService } from './shared/auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from '../../src/app/pages/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardDetailComponent } from './cards/card-detail/card-detail.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,8 +26,6 @@ import { SpinComponent } from './spin/spin.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
  
-
-
 
 @NgModule({
   declarations: [
@@ -51,8 +50,11 @@ import { ProfileComponent } from './profile/profile.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     PaginationModule.forRoot(),
   ],
+ 
   providers: [AuthService,
               AuthGuard,
               AuthenticationService

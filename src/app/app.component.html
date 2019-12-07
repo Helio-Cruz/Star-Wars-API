@@ -3,9 +3,12 @@
 -->
 
 <div class="navbar">
-    <a class="navbar-link" *ngIf="!auth.isLoggedIn()" [routerLink]="['login']">Sign in</a>
-    <a class="navbar-link" *ngIf="auth.isLoggedIn()" [routerLink]="['profile']">{{ auth.getUserDetails()?.name }}</a>
-    <a class="navbar-link" *ngIf="auth.isLoggedIn()"  (click)="auth.logout()">Logout</a>
+    <a class="navbar-link"  [routerLink]="['login']">Sign in</a>
+   
+     <!--
+ <a class="navbar-link" [routerLink]="['profile']">{{ auth.getUserDetails()?.name }}</a>
+    -->
+    <a class="navbar-link"   (click)="auth.logout()">Logout</a>
   <a class="navbar-link"  [routerLink]="['home']">home</a>
   <a class="navbar-link"  [routerLink]="['people']">people</a>
   <a class="navbar-link"  [routerLink]="['films']">films</a>

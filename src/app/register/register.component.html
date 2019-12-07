@@ -1,29 +1,15 @@
-<div class="form" (submit)="register()">
-  <div class="form-row">
-    <div class="col">
-      <input
-        type="text"
-        class="form-control"
-        name="name"
-        placeholder="Enter your name"
-        [(ngModel)]="credentials.name"
-      />
-    </div>
-    <!--
-         <div class="col">
-      <input type="text" class="form-control" placeholder="Last name" />
-    </div>   
-    -->
-  </div>
-  <div class="form-group" (submit)="register()">
+<form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+ 
+ <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input
       type="email"
       class="form-control"
-      aria-describedby="emailHelp"
       name="email"
       placeholder="Enter email"
-      [(ngModel)]="credentials.email"
+      ngModel
+      #emailInput="ngModel"
+   
     />
     <small id="emailHelp" class="form-text text-muted"
       >We'll never share your email with anyone else.</small
@@ -36,8 +22,13 @@
       class="form-control"
       name="password"
       placeholder="Password"
-      [(ngModel)]="credentials.password"
+      ngModel
+      #passwordInput="ngModel"
+     
     />
   </div>
-  <button type="submit" class="btn btn-primary" (onclick)="register()">Register</button>
-</div>
+  <button type="submit" class="btn btn-primary">
+    Register
+  </button>
+</form>
+

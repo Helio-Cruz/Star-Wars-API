@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
-import { AuthenticationService } from './../shared/authentication.service';
+import { AuthenticationService } from '../shared/authentication.service';
 import { Component, OnInit } from '@angular/core';
-import { TokenPayload } from '../shared/models/userDetails';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -11,24 +11,17 @@ import { TokenPayload } from '../shared/models/userDetails';
 export class RegisterComponent implements OnInit {
 
 
-  credentials: TokenPayload = {
-    email: '',
-    name: '',
-    password: '' 
-  };
+ 
 
-
-  constructor( private auth: AuthenticationService, private router: Router) { }
+  constructor( public auth: AuthenticationService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  register() {
-    this.auth.register(this.credentials).subscribe(() => {
-      this.router.navigateByUrl('/profile');
-    }, (err) => {
-      console.error(err);
-    });
+  onSignup(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.auth.createUser(form.value.email, form.value.password);
   }
-
 }

@@ -18,20 +18,22 @@ import { AuthGuard } from './shared/guards/auth.guards';
 const routes: Routes = [
      { path: '', pathMatch: 'full', redirectTo: 'home'},
      { path: 'home', component: HomeComponent,
-     canActivate: [AuthGuard],
+       // canActivate: [AuthGuard],
 
      },
      { path: 'people', component: PeopleComponent,
-     canActivate: [AuthGuard],
+     // canActivate: [AuthGuard],
 
      },
      { path: 'people/:id', component: PeopleComponent },
      { path: 'films', component: FilmsComponent,
-      canActivate: [AuthGuard],
+     // canActivate: [AuthGuard],
      },
      { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
-     { path: 'profile', component: ProfileComponent },
+     { path: 'profile', component: ProfileComponent, 
+     // canActivate: [AuthGuard]
+     },
 
 ];
 

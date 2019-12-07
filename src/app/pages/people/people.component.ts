@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { SwapiService } from './../../shared/swapi.service';
+import { SwapiService } from '../../shared/swapi.service';
 import { HttpClient } from '@angular/common/http';
 import { Swapis } from 'src/app/shared/models/swapi';
 import { Router, ActivatedRoute } from '@angular/router';
