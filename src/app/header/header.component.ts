@@ -3,19 +3,19 @@ import { Subscription } from 'rxjs';
 import { AuthenticationService } from '../shared/services/authentication.service';
 import { Router } from '@angular/router';
 
-@Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
-})
-export class FooterComponent implements OnInit, OnDestroy {
+ 
 
-  logoFooter = '../../../assets/img/logo-empire.png';
-  private authListenerSubs: Subscription;
-  userIsAuthenticated = false;
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
+})
+export class HeaderComponent implements OnInit, OnDestroy {
+
   constructor(private auth: AuthenticationService, private router: Router) { }
 
-
+private authListenerSubs: Subscription;
+userIsAuthenticated = false;
 
   ngOnInit() {
     this.userIsAuthenticated = this.auth.getIsAuth();
@@ -31,4 +31,5 @@ export class FooterComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.authListenerSubs.unsubscribe();
   }
+ 
 }

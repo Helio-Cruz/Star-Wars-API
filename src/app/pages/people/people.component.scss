@@ -1,16 +1,19 @@
 @import "./../../../sass/variables";
 @import "./../../../sass/mixin";
 
+ 
+
 .content {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin: 1em 0;
+  padding: 4em;
+   
 }
 
 .card {
   display: flex;
-  margin: 0.5em;
+  margin: 1.5em;
   @include mobiles {
     max-width: 350px;
   }
@@ -21,11 +24,14 @@
 
 .pagination {
   margin: 1.5em auto;
+  cursor: pointer;
+  
 }
 
 .spinner {
   display: flex;
   justify-content: center;
-  margin-top: 300px;
+  margin-top: 230px;
   height: 39vh;
+   
 }

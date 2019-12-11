@@ -1,0 +1,31 @@
+<div class="back" (click)="onBackClick()">
+  back
+</div>
+<form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+  <div class="form-group">
+ 
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      placeholder="Enter email"
+      ngModel
+      #emailInput="ngModel"
+    />
+ 
+  </div>
+  <div class="form-group">
+ 
+    <input
+      type="password"
+      class="form-control"
+      name="password"
+      placeholder="Password"
+      ngModel
+      #passwordInput="ngModel"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">
+    Register
+  </button>
+</form>

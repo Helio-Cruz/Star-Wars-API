@@ -1,12 +1,17 @@
-.logo {
-  display: flex;
-  justify-content: center;
-  margin: 0;
+@import "../../sass/variables";
+@import "../../sass/mixin";
+.footer {
+    position: absolute;
+    background-color: $footer-background;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
   img {
-  
-    position: relative;
-    top: .4em;
-    width: 55px;
-     
+    margin: 15px;
+    width: 45px;
   }
 }

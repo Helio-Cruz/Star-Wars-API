@@ -1,0 +1,40 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixin";
+form {
+  top: 330px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin: auto;
+  width: 400px;
+  font-family: "Star Wars Round";
+ 
+  input {
+    border-radius: 0;
+    height: 2.9em;
+    font-size: 1em;
+    font-family: none;
+  }
+  button {
+    display: flex;
+    background-color: $footer-background;
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    color: black;
+    &:hover {
+      border: none;
+      color: $footer-background;
+      background-color: black;
+    }
+  }
+}
+
+.back {
+  display: flex;
+  position: relative;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}

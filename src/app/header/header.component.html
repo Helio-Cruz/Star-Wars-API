@@ -1,0 +1,19 @@
+
+<header class="header" *ngIf="userIsAuthenticated">
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <div class="menu" >
+    <a class="navbar-link" [routerLink]="['home']" *ngIf="userIsAuthenticated"
+      >home</a
+    >
+    <a class="navbar-link" [routerLink]="['people']" *ngIf="userIsAuthenticated"
+      >people</a
+    >
+    <a class="navbar-link" [routerLink]="['films']" *ngIf="userIsAuthenticated"
+      >films</a
+    >
+    <a class="navbar-link navbar-link-right" *ngIf="userIsAuthenticated" (click)="onLogout()"
+      >Logout</a
+    >
+  </div>
+</header>

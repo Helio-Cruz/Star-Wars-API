@@ -1,35 +1,5 @@
-@import "../sass/variables";
-@import "../sass/mixin";
-
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  height: 55px;
-  background-color: black;
-  margin: 0;
-  a{
-    text-transform: uppercase;
-    width: 100px;
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: .8em;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: .8;
-    cursor: pointer;
-    text-decoration: none;
-    &:hover{
-      background-color: white;  
-      color: black;
-      transition: 0.4s;
-    }
-  }
-}
+ @import "../sass/variables";
+ @import "../sass/mixin";
 
  
-.footer {
-  background-color: black;
-  height: 10vh;
-}
  

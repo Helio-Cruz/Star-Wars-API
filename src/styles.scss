@@ -2,14 +2,23 @@
 @import '~reset-css/sass/reset';
 @import '../src/sass/mixin';
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
  
+
+@font-face {
+    font-family: "Star Wars Round";
+    src: url("../src/assets/font/Star_Jedi_Rounded.ttf") format("ttf"),
+         url("../src/assets/font/Star_Jedi_Rounded.woff") format("woff");
+}
  
    
 
 body{
-    margin: 0;
-    background-color: black;
- //   font-family: url('../src/assets/font/Starjedi.ttf');
-     
+     min-height: 100vh;
+     position: relative;
+     background-image: url(./assets/img/sky-stars.jpg);
+ 
+}
+
+html{
+    height: 100%;
 }

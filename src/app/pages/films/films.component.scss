@@ -1,12 +1,23 @@
- 
+@import "../../../sass/variables";
+@import "../../../sass/mixin";
 .card {
   display: flex;
   position: relative;
-  width: 900px;
-  margin: 1.5em auto;
+  width: 350px;
+  margin: auto;
+  padding: 4em;
   background-color: black;
   color: white;
   text-align: center;
+  @include mobiles {
+    width: 450px;
+  }
+  @include tablets {
+    width: 750px;
+  }
+  @include large-screens {
+    width: 900px;
+  }
 }
 p {
   text-align: left;

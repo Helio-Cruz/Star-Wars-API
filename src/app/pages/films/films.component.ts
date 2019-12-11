@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SwapiService } from 'src/app/shared/swapi.service';
+import { SwapiService } from 'src/app/shared/services/swapi.service';
 import { SwapiMovie } from 'src/app/shared/models/swapiMovie';
 
 @Component({

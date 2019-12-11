@@ -10,17 +10,17 @@
     background: linear-gradient(to right, transparent, #000 60%);
   }
   img{
-    
-    width: 100%;
-    height: 80vh;
-    @include tablets {
-      height: 85.3vh;
-       
-     }
+    width: 100vw;
+    height: 81vh;
     position: relative;
     object-fit: cover;
     object-position: left 20%;
     z-index: -1;
+    @include tablets {
+      height: 85.3vh;
+       
+     }
+
   }
 }
 .image-text{
@@ -47,16 +47,13 @@
     position: relative;
     font-size: 1.5em;
     top: -15px;  
+    font-family: 'Star Wars Round';
   }
   p{
     font-size: 1.1em;
     line-height: 1.2em;
+    font-family: 'Star Wars Round';
   }
 
 }
- /*
-.content{
-  height: 600px;
-  background-color: black;
-}
-*/
+ 

@@ -1,6 +1,8 @@
-import { AuthenticationService } from './shared/authentication.service';
-import { AuthService } from './shared/auth.service';
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AuthenticationService } from './shared/services/authentication.service';
+ 
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
  
  
 
@@ -9,30 +11,25 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent  implements OnInit {
+export class AppComponent  implements OnInit, OnDestroy {
 
   // wrapperImg = '../../../assets/img/wrapper.jpg';
   back = '../../../assets/img/back.jpg';
 
  // title = 'star-wars-API';
 
-
-
-  // showMenu: boolean = false;
-
-  constructor(private authService: AuthService, private auth: AuthenticationService) {
+  constructor(private auth: AuthenticationService, private router: Router) {
 
    }
-/*
-   ngOnInit() {
-     this.authService.showMenuEmitter
-     .subscribe(
-       show => this.showMenu = show
-     );
-   }
-  */
+
  ngOnInit() {
+  this.auth.autoAuthUser();
+ }
+ ngOnDestroy() {
 
  }
-
+ onLogout() {
+   this.auth.logout();
+   this.router.navigate(['/login']);
+ }
 }

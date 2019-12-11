@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { SwapiService } from '../../shared/swapi.service';
+import { SwapiService } from '../../shared/services/swapi.service';
 import { HttpClient } from '@angular/common/http';
 import { Swapis } from 'src/app/shared/models/swapi';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -22,6 +22,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
   id: number;
   limit: 10;
   disabled: boolean;
+ 
 
   constructor(private swapiService: SwapiService,
               private http: HttpClient,

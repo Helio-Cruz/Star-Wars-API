@@ -1,0 +1,123 @@
+  @import "../../sass/variables";
+  @import "../../sass/mixin";
+
+
+
+/* header */
+
+.header {
+  background-color: $footer-background;
+  width: 100%;
+  position: relative;
+  top: 0;
+}
+
+.menu {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $footer-background;
+}
+
+.navbar-link {
+  display: block;
+  padding: 20px 20px;
+  color: black;
+  font-weight: 800;
+  font-size: 0.8;
+  // text-transform: uppercase;
+  font-family: 'Star Wars Round';
+ 
+}
+
+.navbar-link:hover{
+  color: red;
+  transition: 0.4s;
+  text-decoration: none;
+}
+
+/* menu */
+
+.menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.navicon {
+  background: black;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+  &::before, &::after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  &::before {
+    top: 5px;
+  }
+  &::after {
+    top: -5px;
+  }
+}
+
+/* menu btn */
+
+.menu-btn {
+  display: none;
+  &:checked ~ .menu {
+    max-height: 240px;
+  }
+  &:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  &:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+  &.menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+  &:checked ~ .menu-icon:not(.steps) .navicon::before,
+  &:checked ~ .menu-icon:not(.steps) .navicon::after {
+    top: 0;
+  }
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .navbar-link {
+    padding: 20px 50px;
+    float: left;
+    text-decoration: none;
+    &-right {
+      float: right;
+      cursor: pointer;
+    }
+  }
+  .menu {
+    clear: none;
+    max-height: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}

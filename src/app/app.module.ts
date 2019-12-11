@@ -2,46 +2,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, } from '@angular/core';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AuthenticationService } from './shared/authentication.service';
-import { AuthService } from './shared/auth.service';
-
+import { AuthenticationService } from './shared/services/authentication.service';
+ 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CardsComponent } from './cards/cards.component';
-import { CardDetailComponent } from './cards/card-detail/card-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { PeopleComponent } from './pages/people/people.component';
 import { FilmsComponent } from './pages/films/films.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
-import { PaginationComponent } from './shared/pagination/pagination.component';
-import { PeopleDetailComponent } from './pages/people/people-detail/people-detail.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './shared/guards/auth.guards';
 import { SpinComponent } from './spin/spin.component';
-import { RegisterComponent } from './register/register.component';
-import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { HeaderComponent } from './header/header.component';
+import { FourOhFourComponent } from './pages/four-oh-four/four-oh-four.component';
  
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardsComponent,
-    CardDetailComponent,
     FooterComponent,
     PeopleComponent,
     FilmsComponent,
-    PaginationComponent,
-    PeopleDetailComponent,
     LoginComponent,
     SpinComponent,
     RegisterComponent,
     ProfileComponent,
+    HeaderComponent,
+    FourOhFourComponent,
 
 
   ],
@@ -55,9 +51,10 @@ import { ProfileComponent } from './profile/profile.component';
     PaginationModule.forRoot(),
   ],
  
-  providers: [AuthService,
+  providers: [
               AuthGuard,
-              AuthenticationService
+              AuthenticationService,
+              {provide: HTTP_INTERCEPTORS, useClass: AuthGuard, multi: true}
   ],
   bootstrap: [AppComponent]
 })
