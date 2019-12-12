@@ -18,20 +18,13 @@ import { AuthGuard } from './shared/guards/auth.guards';
 
 const routes: Routes = [
      { path: '', pathMatch: 'full', redirectTo: 'login'},
-     { path: 'home', component: HomeComponent,
-       // canActivate: [AuthGuard],
-
-     },
-     { path: 'people', component: PeopleComponent,
-     // canActivate: [AuthGuard],
-
-     },
+     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+     { path: 'people', component: PeopleComponent, canActivate: [AuthGuard] },
      { path: 'people/:id', component: PeopleComponent },
-     { path: 'films', component: FilmsComponent,
-     // canActivate: [AuthGuard],
-     },
-     { path: 'login', component: LoginComponent },
+     { path: 'films', component: FilmsComponent, canActivate: [AuthGuard]},
+      { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
+  //  { path: 'pages', loadChildren: 'pages/pages.module#PagesModule'},
      { path: 'profile', component: ProfileComponent,
      // canActivate: [AuthGuard]
      },
@@ -42,6 +35,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [AuthGuard],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

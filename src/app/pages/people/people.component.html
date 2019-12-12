@@ -1,4 +1,6 @@
-<nav class="pagination" aria-label="Page navigation example">
+ 
+
+  <nav class="pagination" aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
       <a
@@ -25,7 +27,7 @@
 
 <div *ngIf="!isLoading">
   <div class="content" *ngIf="peoples">
-    <div *ngFor="let people of peoples" [routerLink]="['/people', people.id]">
+    <div *ngFor="let people of peoples">
       <div class="card" style="width: 18rem;">
         <img
           src="../../../assets/img/people/{{ people.name }}.jpg"
@@ -48,3 +50,5 @@
 <div class="spinner" *ngIf="isLoading">
   <app-spin></app-spin>
 </div>
+
+ 

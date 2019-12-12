@@ -31,9 +31,11 @@ export class AuthenticationService {
 
   createUser(email: string, password: string) {
      const user: User = { email, password };
-     this.http.post('http://localhost:3000/api/user/register', user)
-      .subscribe(response => {
-        console.log(response);
+     return this.http.post('http://localhost:3000/api/user/register', user)
+      .subscribe(() => {
+        this.router.navigate(['/']);
+      }, error => {
+        this.authStatusListener.next(false);
       });
   }
   login(email: string, password: string) {
@@ -58,11 +60,16 @@ export class AuthenticationService {
         console.log(response);
       }
 
+    }, error => {
+      this.authStatusListener.next(false);
     });
   }
 
   autoAuthUser() {
     const authInformation = this.getAuthData();
+    if (!authInformation) {
+      return;
+    }
     const now = new Date();
     const expiresIn = authInformation.expirationDate.getTime() - now.getTime();
     if (expiresIn > 0) {

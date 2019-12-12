@@ -9,7 +9,9 @@ export class HomeComponent implements OnInit {
 
   videoHome =  '../../../assets/video/star wars.mp4';
   title = 'Welcome To Star Wars Api';
-  text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nemo nisi ipsam at aperiam cum repellendus recusandae reiciendis cupiditate exquia, nobis autem beatae sit officia suscipit debitis temporibus iure.';
+  text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat' +
+         'nemo nisi ipsam at aperiam cum repellendus recusandae reiciendis cupiditate exquia' +
+         'nobis autem beatae sit officia suscipit debitis temporibus iure.';
   constructor() { }
 
   ngOnInit() {

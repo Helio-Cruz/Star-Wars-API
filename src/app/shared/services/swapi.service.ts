@@ -2,8 +2,8 @@ import { SwapiMovie } from '../models/swapiMovie';
 import { environment } from '../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError, pipe } from 'rxjs';
-import { catchError, delay, map, } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { Swapis } from 'src/app/shared/models/swapi';
 
 @Injectable({
@@ -34,18 +34,6 @@ export class SwapiService {
     }
   }
 
-  /*
-getSwapiId(id: number) {
-  let peoples = this.getSwapiPage();
-  for (let i = 0; i < peoples.length; i++) {
-    let people = people[i];
-    if (people.id == id) {
-        return people;
-    }
-    return null;
-  }
-}
-*/
   getSwapiMovie(): Observable<SwapiMovie[]> {
     return this.http.get<SwapiMovie[]>(`${this.API}films`)
       .pipe(

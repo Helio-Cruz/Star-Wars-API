@@ -1,15 +1,15 @@
 @import "../../sass/variables";
 @import "../../sass/mixin";
+
 .footer {
-    position: absolute;
-    background-color: $footer-background;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-   
+  position: absolute;
+  background-color: $footer-background;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   img {
     margin: 15px;
     width: 45px;

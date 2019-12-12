@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
         jwt.verify(token, 'MY_SECRET');
         next();
     } catch(error) {
-        res.status(401).json({ message: "Auth failed" });
+        res.status(401).json({ message: "You are not authenticated!" });
     }
      
 }

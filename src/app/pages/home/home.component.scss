@@ -1,13 +1,14 @@
 
 @import "../../../sass/variables";
 @import "../../../sass/mixin";
- 
- 
+
 .image-intro{
   z-index: 1;
-  background: linear-gradient(to right, transparent, #000 98%);
+  background: linear-gradient(to right, transparent, #000 98%),
+              linear-gradient(to bottom, transparent 90%, #000);
   @include tablets {
-    background: linear-gradient(to right, transparent, #000 60%);
+    background: linear-gradient(to right, transparent, #000 60%),
+                linear-gradient(to bottom, transparent 90%, #000);
   }
   img{
     width: 100vw;
@@ -17,30 +18,32 @@
     object-position: left 20%;
     z-index: -1;
     @include tablets {
-      height: 85.3vh;
-       
-     }
-
+      height: 84.6vh;
+    }
+    @include computers {
+      height: 84.6vh;
+    }
   }
 }
 .image-text{
   position: relative;
-  top: -50px;
+  //top: -50px;
   text-align: center;
   color: white;
   width: 100%;
-  padding: 60px 15px;
-  background: linear-gradient(to bottom, transparent, #000 20%, #000 15%);
+  padding: 55px 15px;
+  background: black;
   @include tablets {
-    position:    absolute;
-    background: linear-gradient(to right, transparent, #000 30%, #000 100%);
+    position: absolute;
+    background: linear-gradient(to right, transparent, #000 30%);
     width: 350px;
     right: 0;
     margin: auto 1.5em;
-    top: 14.5em;   
+    top: 14.5em;
   }
   @include computers {
-   margin: auto 15em;
+    padding: 0;
+    margin: auto 10em;
     
   }
   h1{

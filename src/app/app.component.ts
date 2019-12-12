@@ -13,12 +13,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent  implements OnInit, OnDestroy {
 
-  // wrapperImg = '../../../assets/img/wrapper.jpg';
   back = '../../../assets/img/back.jpg';
 
- // title = 'star-wars-API';
-
-  constructor(private auth: AuthenticationService, private router: Router) {
+  constructor(private auth: AuthenticationService, private router: Router) {  
 
    }
 

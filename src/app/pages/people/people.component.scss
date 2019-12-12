@@ -2,18 +2,20 @@
 @import "./../../../sass/mixin";
 
  
-
 .content {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   padding: 4em;
+  min-height: 100vh;
    
 }
 
 .card {
-  display: flex;
+  display: flex; 
   margin: 1.5em;
+  
   @include mobiles {
     max-width: 350px;
   }
@@ -25,13 +27,11 @@
 .pagination {
   margin: 1.5em auto;
   cursor: pointer;
-  
 }
 
 .spinner {
   display: flex;
   justify-content: center;
-  margin-top: 230px;
+  margin: 146px;
   height: 39vh;
-   
 }
