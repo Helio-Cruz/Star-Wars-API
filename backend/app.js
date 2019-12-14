@@ -1,5 +1,5 @@
 const express = require('express');
-// const path = require('path');
+const path = require('path');
 // const favicon = require('serve-favicon');
 // const logger = require('morgan');
 // const cookieParser = require('cookie-parser');
@@ -50,6 +50,9 @@ app.use((req, res, next) => {
  
 app.use(bodyParser.json())
 app.use("/api/user", userRoutes);
+app.use((req, res, next) => {
+  res.sendFile(path.join(_dirname, "angular", "index.html"));
+});
 
 module.exports = app;
 

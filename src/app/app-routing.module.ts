@@ -8,7 +8,7 @@ import { FilmsComponent } from './pages/films/films.component';
 import { PeopleComponent } from './pages/people/people.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { ProfileComponent } from './pages/profile/profile.component';
+
 
 
 
@@ -21,13 +21,12 @@ const routes: Routes = [
      { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
      { path: 'people', component: PeopleComponent, canActivate: [AuthGuard] },
      { path: 'people/:id', component: PeopleComponent },
-     { path: 'films', component: FilmsComponent, canActivate: [AuthGuard]},
+     { path: 'films', component: FilmsComponent, 
+     // canActivate: [AuthGuard]
+    },
       { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
   //  { path: 'pages', loadChildren: 'pages/pages.module#PagesModule'},
-     { path: 'profile', component: ProfileComponent,
-     // canActivate: [AuthGuard]
-     },
      { path: 'four-oh-four', component: FourOhFourComponent },
      { path: '**', redirectTo: '/four-oh-four' }
 
