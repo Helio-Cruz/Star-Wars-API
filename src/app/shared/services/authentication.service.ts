@@ -3,11 +3,14 @@ import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  private readonly API2 = `${environment.API2}`;
 
   private token: string;
   private tokenTimer: any;
@@ -31,7 +34,7 @@ export class AuthenticationService {
 
   createUser(email: string, password: string) {
      const user: User = { email, password };
-     return this.http.post('http://localhost:3000/api/user/register', user)
+     return this.http.post(`${this.API2}register`, user)
       .subscribe(() => {
         this.router.navigate(['/']);
       }, error => {
@@ -42,7 +45,7 @@ export class AuthenticationService {
     const user: User = { email, password };
     this.http
     .post<{token: string, expiresIn: number}>
-    ('http://localhost:3000/api/user/login', user)
+    (`${this.API2}login`, user)
     .subscribe(response => {
       const token = response.token;
       this.token = token;
