@@ -22,7 +22,7 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 - passport
 - nodemon (partie Node JS)
 
-## API
+## Api
 
 - swapi Api
 
