@@ -1,7 +1,6 @@
 # StarWarsAPI
 
-Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines données de Swapi API 
-.ms) et gérer l'accès utilisateur par login et mot de passe avec Le bundle MEAN.
+Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines données de Swapi API (personnages et films) et gérer l'accès utilisateur par login et mot de passe avec Le bundle MEAN.
 
  
 
