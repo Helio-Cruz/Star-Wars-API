@@ -6,6 +6,7 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 
 ## Technologies Utilisées
 
+- Angular
 - Node JS
 - Express JS
 - Mongo DB
@@ -20,6 +21,10 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 - mongoose
 - passport
 - nodemon (partie Node JS)
+
+## API
+
+- swapi Api
 
 ## Development server
 
