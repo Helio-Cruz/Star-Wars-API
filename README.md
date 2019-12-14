@@ -6,7 +6,7 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 
 ## Technologies Utilisées
 
-- Angular
+- Angular CLI
 - Node JS
 - Express JS
 - Mongo DB
