@@ -24,9 +24,7 @@ const routes: Routes = [
      { path: 'films', component: FilmsComponent, canActivate: [AuthGuard]},
       { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
-  //  { path: 'pages', loadChildren: 'pages/pages.module#PagesModule'},
      { path: 'profile', component: ProfileComponent,
-     // canActivate: [AuthGuard]
      },
      { path: 'four-oh-four', component: FourOhFourComponent },
      { path: '**', redirectTo: '/four-oh-four' }
