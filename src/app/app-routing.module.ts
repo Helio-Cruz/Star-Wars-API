@@ -24,8 +24,7 @@ const routes: Routes = [
      { path: 'films', component: FilmsComponent, canActivate: [AuthGuard]},
       { path: 'login', component: LoginComponent },
      { path: 'register', component: RegisterComponent },
-     { path: 'profile', component: ProfileComponent,
-     },
+     { path: 'profile', component: ProfileComponent },
      { path: 'four-oh-four', component: FourOhFourComponent },
      { path: '**', redirectTo: '/four-oh-four' }
 
