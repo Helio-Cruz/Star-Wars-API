@@ -2,7 +2,6 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SpinComponent } from './spin/spin.component';
 import { FourOhFourComponent } from './pages/four-oh-four/four-oh-four.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { FilmsComponent } from './pages/films/films.component';
 import { PeopleComponent } from './pages/people/people.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -40,7 +39,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     PeopleComponent,
     FilmsComponent,
-    ProfileComponent,
     FourOhFourComponent,
     SpinComponent,
     LoginComponent,

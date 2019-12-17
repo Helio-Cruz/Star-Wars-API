@@ -22,4 +22,5 @@ export class SubArray2 {
     opening_crawl: string;
     release_date: string;
     producer: string;
+     
   }

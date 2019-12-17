@@ -13,6 +13,7 @@ export class FilmsComponent implements OnInit {
   film: '../../../assets/img/vehicles2.jpg';
 
   isLoading = true;
+  results: any[]; 
 
   constructor(private swapiService: SwapiService) { }
 
@@ -26,7 +27,7 @@ export class FilmsComponent implements OnInit {
     .getSwapiMovie()
     .subscribe(
       (data: SwapiMovie[]) =>  {
-      this.movies = data;
+      this.movies = data['results'];
       this.isLoading = false;
       });
   }

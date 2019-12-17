@@ -1,5 +1,5 @@
 const express = require('express');
-// const path = require('path');
+const path = require('path');
 // const favicon = require('serve-favicon');
 // const logger = require('morgan');
 // const cookieParser = require('cookie-parser');
@@ -14,7 +14,9 @@ const app = express();
 
 mongoose
 .connect(
-  "mongodb+srv://helio:120688@cluster0-w7t2v.mongodb.net/test"
+  "mongodb+srv://helio:" +
+  process.env.MONGO_ATLAS_PW +
+  "@cluster0-w7t2v.mongodb.net/test"
   )
 .then(() => {
   console.log('Connected to database');
@@ -24,19 +26,20 @@ mongoose
 });
 
 // const app = require('./models/users');
+ app.use("/", express.static(path.join(__dirname, "star-wars-API")));
 
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, PUT, DELETE, OPTIONS"
-  );
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+//   );
+//   res.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+//   );
+//   next();
+// });
 
 // app.use((req, res, next) => {
 //   console.log('First middleware');
@@ -50,6 +53,9 @@ app.use((req, res, next) => {
  
 app.use(bodyParser.json())
 app.use("/api/user", userRoutes);
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "star-wars-API", "index.html"));
+});
 
 module.exports = app;
 
