@@ -10,6 +10,7 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 - Node JS
 - Express JS
 - Mongo DB
+- Sass/Scss
 
 ## Librairies
 
