@@ -1,5 +1,6 @@
- const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { sendWelcomeEmail } = require('../emails/account');
 
 const User = require("../models/users");
 
@@ -13,10 +14,12 @@ exports.createUser = (req, res, next) => {
      });  
      user.save()
      .then(result => {
+        sendWelcomeEmail(user.email, user.name)
          res.status(201).json({
              message: 'User created!',
-             result: result
+             result: result,         
          });
+       
      })
      .catch(err => {
          res.status(500).json({        

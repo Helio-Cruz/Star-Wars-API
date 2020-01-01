@@ -8,7 +8,7 @@
     position: relative;
     object-fit: cover;
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
   }
 }
 
@@ -16,7 +16,10 @@ form {
   z-index: 1;
   font-family: "Star Wars Round";
   position: relative;
-  bottom: 500px;
+  top: 180px;
+  @include computers {
+    top: 250px;
+  }
   margin: auto;
   width: 350px;
   height: 0;
@@ -28,13 +31,13 @@ form {
   }
   button {
     display: flex;
-    background-color: $footer-background;
+    background-color: $color-priority;
     margin: auto;
     border: none;
     border-radius: 0;
     &:hover {
       border: none;
-      color: $footer-background;
+      color: $color-priority;
       background-color: black;
     }
   }
@@ -47,7 +50,7 @@ form {
   margin: 1.5em;
   cursor: pointer;
   a {
-    color: $footer-background;
+    color: $color-priority;
 
     &:hover {
       color: red;

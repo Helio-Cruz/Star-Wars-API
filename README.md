@@ -22,10 +22,11 @@ Projet crée avec Angular CLI (Framework front-end) pour accéder à certaines d
 - mongoose
 - passport
 - nodemon (partie Node JS)
+- Sendgrid
 
 ## Api
 
-- swapi Api
+- Swapi Api
 
 ## Development server
 

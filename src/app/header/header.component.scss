@@ -4,7 +4,7 @@
 /* header */
 
 .header {
-  background-color: $footer-background;
+  background-color: $color-priority;
   width: 100%;
   position: relative;
   top: 0;
@@ -15,7 +15,6 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: $footer-background;
 }
 
 .navbar-link {
@@ -28,7 +27,7 @@
 }
 
 .navbar-link:hover {
-  color: red;
+  color: $color-hover;
   transition: 0.4s;
   text-decoration: none;
 }
