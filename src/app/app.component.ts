@@ -1,4 +1,3 @@
-import { Subscription } from 'rxjs';
 import { AuthenticationService } from './shared/services/authentication.service';
  
 import { Component, OnInit, OnDestroy } from '@angular/core';

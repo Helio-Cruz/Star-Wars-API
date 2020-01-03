@@ -1,8 +1,8 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const { sendWelcomeEmail } = require('../emails/account');
 
-const User = require("../models/users");
+const User = require('../models/users');
 
 exports.createUser = (req, res, next) => {
     bcrypt.hash(req.body.password, 10)
@@ -23,7 +23,7 @@ exports.createUser = (req, res, next) => {
      })
      .catch(err => {
          res.status(500).json({        
-          message: "Invalid authentication The e-mail or password already exists!" /* afficher error message on the modal*/         
+          message: 'Invalid authentication The e-mail or password already exists! '/* afficher error message on the modal*/         
          });
       });
    });

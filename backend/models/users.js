@@ -1,7 +1,7 @@
 // var crypto = require('crypto');
 const mongoose = require( 'mongoose' );
 // var jwt = require('jsonwebtoken');
-const uniqueValidator = require("mongoose-unique-validator");
+const uniqueValidator = require('mongoose-unique-validator');
 
 const userSchema = mongoose.Schema({
     email: {
@@ -18,4 +18,4 @@ const userSchema = mongoose.Schema({
 
  userSchema.plugin(uniqueValidator);
 
- module.exports = mongoose.model("User", userSchema);
+ module.exports = mongoose.model('User', userSchema);

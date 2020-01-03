@@ -5,16 +5,16 @@ const express = require('express');
 // const cookieParser = require('cookie-parser');
  const bodyParser = require('body-parser');
 // const passport = require('passport');
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const userRoutes = require("./routes/user");
+const userRoutes = require('./routes/user' );
 
 
 const app = express();
 
 mongoose
 .connect(
-  "mongodb+srv://helio:120688@cluster0-w7t2v.mongodb.net/test"
+  'mongodb+srv://helio:120688@cluster0-w7t2v.mongodb.net/test'
   )
 .then(() => {
   console.log('Connected to database');
@@ -49,7 +49,7 @@ app.use((req, res, next) => {
 // })
  
 app.use(bodyParser.json())
-app.use("/api/user", userRoutes);
+app.use('/api/user', userRoutes);
 
 module.exports = app;
 
