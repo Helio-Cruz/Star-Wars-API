@@ -1,14 +1,12 @@
 const express = require('express');
-// const path = require('path');
-// const favicon = require('serve-favicon');
-// const logger = require('morgan');
-// const cookieParser = require('cookie-parser');
- const bodyParser = require('body-parser');
-// const passport = require('passport');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const userRoutes = require('./routes/user' );
 
+const filmRoutes = require('./routes/films' );
+
+const characterRoutes = require('./routes/characters');
 
 const app = express();
 
@@ -23,8 +21,7 @@ mongoose
   console.log('Connection failed');
 });
 
-// const app = require('./models/users');
-
+ 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -37,19 +34,28 @@ app.use((req, res, next) => {
   );
   next();
 });
-
-// app.use((req, res, next) => {
-//   console.log('First middleware');
-//   next();
-// })
-
-// app.use((req, res, next) => {
-//   res.send('Hello from express');
-//   next();
-// })
+ 
  
 app.use(bodyParser.json())
+/*users*/
 app.use('/api/user', userRoutes);
+
+/*films */
+app.post('/films', filmRoutes);
+app.get('/films', filmRoutes);
+
+app.get('/films/:filmId', filmRoutes);
+app.put('/films/:filmId', filmRoutes);
+app.delete('/films/:filmId', filmRoutes);
+
+/*characters*/
+
+app.post('/characters', characterRoutes);
+app.get('/characters', characterRoutes);
+
+app.get('/characters/:characterId', characterRoutes);
+app.put('/characters/:characterId', characterRoutes);
+app.delete('/characters/:characterId', characterRoutes);
 
 module.exports = app;
 

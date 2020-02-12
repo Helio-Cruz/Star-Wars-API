@@ -16,14 +16,14 @@ exports.createUser = (req, res, next) => {
      .then(result => {
         sendWelcomeEmail(user.email, user.name)
          res.status(201).json({
-             message: 'User created!',
+             message: 'User creé!',
              result: result,         
          });
        
      })
      .catch(err => {
          res.status(500).json({        
-          message: 'Invalid authentication The e-mail or password already exists! '/* afficher error message on the modal*/         
+          message: 'Cette authentication n\'est pas valide l\'email ou le mot de passe est dejà existant'/* afficher error message on the modal*/         
          });
       });
    });
