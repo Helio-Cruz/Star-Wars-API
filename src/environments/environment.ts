@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
-  API: 'https://swapi.co/api/'
+  // API: 'https://swapi.co/api/'
+  API: 'http://localhost:3000/'
 };
 

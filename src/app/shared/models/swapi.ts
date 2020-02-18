@@ -1,9 +1,10 @@
 export class Swapis {
-    id: number;
-    url: string;
-    name: string;
-    count: number;
-    previous: string;
-    next: string;
-    results: [];
+ //   id: number;
+   // url: string;
+    nom: string;
+    taille: string;
+  //  count: number;
+  //  previous: string;
+ //   next: string;
+     result: [];
 }

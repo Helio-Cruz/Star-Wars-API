@@ -1,20 +1,20 @@
 <div *ngIf="movies">
-  <div class="card" *ngFor="let movie of movies.results">
-    <img
-      src="../../../assets/img/films/{{ movie.title }}.jpg"
+  <div class="card" *ngFor="let movie of movies.result">
+    <!-- <img
+      src="../../../assets/img/films/{{ movie.titre }}.jpg"
       class="card-img-top"
-    />
+    /> -->
     <div class="card-body">
-      <h5 class="card-title">{{ movie.title }}</h5>
-      <p class="card-text">Episode: {{ movie.episode_id }}</p>
+      <h5 class="card-title">{{ movie.titre }}</h5>
+      <p class="card-text">Episode: {{ movie.episode }}</p>
       <p class="card-text">
-        Release Date: {{ movie.release_date | date: "longDate" }}
+        Date de Sortie: {{ movie.sortie }}
       </p>
-      <p class="card-text">Sinopse: {{ movie.opening_crawl }}</p>
+      <p class="card-text">Sinopse: {{ movie.description }}</p>
       <p class="card-text">
         <small class="text-muted">Director: {{ movie.director }}</small>
         <br />
-        <small class="text-muted">Producer: {{ movie.producer }}</small>
+        <!-- <small class="text-muted">Producer: {{ movie.producer }}</small> -->
       </p>
     </div>
   </div>

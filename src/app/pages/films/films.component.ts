@@ -27,6 +27,7 @@ export class FilmsComponent implements OnInit {
     .subscribe(
       (data: SwapiMovie[]) =>  {
       this.movies = data;
+      console.log(data)
       this.isLoading = false;
       });
   }

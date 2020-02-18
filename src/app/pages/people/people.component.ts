@@ -14,13 +14,13 @@ export class PeopleComponent implements OnInit, OnDestroy {
 
   data: Swapis;
   isLoading = true;
-  next: string;
-  previous: string;
-  peoples = [];
+  // next: string;
+ // previous: string;
+  characters = [];
   inscription: Subscription;
-  page: number;
-  id: number;
-  limit: 10;
+  // page: number;
+ // id: number;
+  // limit: 10;
   disabled: boolean;
  
 
@@ -32,15 +32,17 @@ export class PeopleComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.getSwapi();
+    /*
     this.inscription = this.route.queryParams.subscribe(
       (queryParams: any) => {
         this.page = +queryParams.page || 1;
       }
     );
+    */
   }
 
   ngOnDestroy() {
-    this.inscription.unsubscribe();
+   // this.inscription.unsubscribe();
   }
 
   getSwapi() {
@@ -50,15 +52,16 @@ export class PeopleComponent implements OnInit, OnDestroy {
       .subscribe
       (datas => {
         this.data = datas;
-        this.id = this.data.id;
-        this.peoples = this.data.results;
-        console.log(this.peoples);
-        this.next = this.data.next;
-        this.previous = this.data.previous;
+        this.characters = this.data.result;
+      //  this.nom = this.data.nom;
+     //   this.taille = this.data.taille;
+        console.log(this.data);
+       // this.next = this.data.next;
+       // this.previous = this.data.previous;
         this.isLoading = false;
       });
   }
-
+/*
   getPeoplePreviousNext(change: boolean) {
     if (change === true) {
       this.isLoading = true;
@@ -95,4 +98,5 @@ export class PeopleComponent implements OnInit, OnDestroy {
         });
      }
   }
+  */
 }

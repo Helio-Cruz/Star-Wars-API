@@ -28,7 +28,7 @@ exports.listAllFilms = (req, res, next) => {
   Film.find({})
    .then(results => {
       res.status(201).json({
-        message: 'Films trouvé!',
+      //  message: 'Films trouvé!',
       result: results,   
    });
   })

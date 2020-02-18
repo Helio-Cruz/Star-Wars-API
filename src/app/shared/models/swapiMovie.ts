@@ -1,25 +1,24 @@
 export class SwapiMovie {
-    count: number;
-    next: string;
-    results: SubArray2;
+   // count: number;
+   // next: string;
+    result: SubArray2;
     constructor(
-        count: number,
-        next: string,
-        results: SubArray2
+       // count: number,
+     //   next: string,
+        result: SubArray2
     ) {
-        this.count = count;
-        this.next = next;
-        this.results = results;
+       // this.count = count;
+       // this.next = next;
+        this.result = result;
     }
 
 }
 
 export class SubArray2 {
-    id: number;
-    title: string;
-    episode_id: number;
+   // id: number;
+    titre: string;
+    sortie: string;
     director: string;
-    opening_crawl: string;
-    release_date: string;
-    producer: string;
+    episode: string;
+    description: string;
   }

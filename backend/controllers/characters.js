@@ -28,7 +28,7 @@ exports.listAllCharacters = (req, res, next) => {
     Character.find({})
     .then(results => {
         res.status(201).json({
-            message: 'Characters trouvé!',
+         //   message: 'Characters trouvé!',
             result: results,
         });
     })

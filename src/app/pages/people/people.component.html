@@ -1,6 +1,6 @@
  
 
-  <nav class="pagination" aria-label="Page navigation example">
+  <!-- <nav class="pagination" aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">
       <a
@@ -23,24 +23,19 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav> -->
 
 <div *ngIf="!isLoading">
-  <div class="content" *ngIf="peoples">
-    <div *ngFor="let people of peoples">
+  <div class="content" *ngIf="characters">
+    <div *ngFor="let character of characters">
       <div class="card" style="width: 18rem;">
-        <img
-          src="../../../assets/img/people/{{ people.name }}.jpg"
+         <img
+          src="../../../assets/img/people/{{ character.nom }}.jpg"
           class="card-img-top"
-        />
+        /> 
         <div class="card-body">
-          <h5 class="card-title">{{ people.name | uppercase }}</h5>
-          <p class="card-text">Height: {{ people.height }}</p>
-          <p class="card-text">Gender: {{ people.gender }}</p>
-          <p class="card-text">Hair Color: {{ people.hair_color }}</p>
-          <p class="card-text">Skin Color: {{ people.skin_color }}</p>
-          <p class="card-text">Eyes Color: {{ people.eye_color }}</p>
-          <p class="card-text">Birthday: {{ people.birth_year }}</p>
+          <h5 class="card-title">{{ character.nom | uppercase }}</h5>
+          <p class="card-text">taille: {{ character.taille }} m</p>
         </div>
       </div>
     </div>

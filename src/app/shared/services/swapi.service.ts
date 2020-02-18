@@ -17,12 +17,12 @@ export class SwapiService {
   private readonly API = `${environment.API}`;
 
   getSwapiPeople(): Observable<Swapis> {
-    return this.http.get<Swapis>(`${this.API}people`)
+    return this.http.get<Swapis>(`${this.API}characters`)
       .pipe(
         catchError(this.handleError),
       );
   }
-
+/*
   getSwapiPage(page?: string, id?: number): Observable<Swapis> {
     if (page == null) {
       return this.http.get<Swapis>(`${this.API}people/?page= `)
@@ -33,7 +33,7 @@ export class SwapiService {
       return this.http.get<Swapis>(page);
     }
   }
-
+*/
   getSwapiMovie(): Observable<SwapiMovie[]> {
     return this.http.get<SwapiMovie[]>(`${this.API}films`)
       .pipe(
