@@ -1,9 +1,9 @@
 <div *ngIf="movies">
   <div class="card" *ngFor="let movie of movies.result">
-    <!-- <img
+  <img
       src="../../../assets/img/films/{{ movie.titre }}.jpg"
       class="card-img-top"
-    /> -->
+    />  
     <div class="card-body">
       <h5 class="card-title">{{ movie.titre }}</h5>
       <p class="card-text">Episode: {{ movie.episode }}</p>

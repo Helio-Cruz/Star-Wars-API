@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { gsap, TimelineLite, TweenMax } from 'gsap';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,10 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    gsap.timeline()
+    .from('#reveal1', {
+      opacity: 0, scale: 0, ease: 'none'
+    });
   }
 
 }
