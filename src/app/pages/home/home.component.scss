@@ -12,16 +12,16 @@
   }
   img{
     width: 100vw;
-    height: 81vh;
+    height: 65vh;
     position: relative;
     object-fit: cover;
     object-position: left 20%;
     z-index: -1;
     @include tablets {
-      height: 84.6vh;
+      height: 88vh;
     }
     @include computers {
-      height: 84.6vh;
+      height: 87vh;
     }
   }
 }
