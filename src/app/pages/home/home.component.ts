@@ -9,9 +9,9 @@ import { gsap, TimelineLite, TweenMax } from 'gsap';
 export class HomeComponent implements OnInit {
 
   videoHome =  '../../../assets/video/star wars.mp4';
-  title = 'Welcome To Star Wars Api';
+  title = 'Star Wars';
   text = 'Here you will find some data of Characters and Films from Star Wars' ;
-
+  EmpireLogo = '../../../assets/img/Empire-logo2.png';
 
   constructor() { }
 

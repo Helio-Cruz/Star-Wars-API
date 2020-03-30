@@ -35,11 +35,7 @@
     "cors": "^2.8.4",
     "express": "^4.17.1",
     "express-jwt": "^5.3.1",
-<<<<<<< Updated upstream
     "gsap": "^3.0.5",
-=======
-    "gsap": "^3.0.4",
->>>>>>> Stashed changes
     "hammerjs": "^2.0.8",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.0",

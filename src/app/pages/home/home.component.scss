@@ -1,4 +1,4 @@
-
+@import "../../../sass/animations";
 @import "../../../sass/variables";
 @import "../../../sass/mixin";
 
@@ -27,7 +27,6 @@
 }
 .image-text{
   position: relative;
-  //top: -50px;
   text-align: center;
   color: white;
   width: 100%;
@@ -38,23 +37,29 @@
     background: linear-gradient(to right, transparent, #000 30%);
     width: 350px;
     right: 0;
-    top: 14.5em;
+    top: 10.5em;
     margin: auto 2em;
     padding: 5em 0;
   }
   @include computers {
     margin: auto 8em;
   }
+
   h1{
     position: relative;
-    font-size: 1.5em;
+    font-size: 5.5em;
     top: -15px;  
     font-family: 'Star Wars Round';
+    animation: title 2.5s infinite;
   }
   p{
     font-size: 1.1em;
     line-height: 1.2em;
     font-family: 'Star Wars Round';
+  }
+  img{
+    margin: 10px;
+    width: 190px;
   }
 }
  
