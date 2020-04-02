@@ -26,7 +26,6 @@ Projet crée avec Angular CLI (Framework front-end) Pour accéder aux donner des
 
 ## Api
 
-- Swapi Api
 
 ## Development server
 
