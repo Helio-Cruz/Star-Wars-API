@@ -1,6 +1,6 @@
 # StarWarsAPI
 
-Projet crée avec Angular CLI (Framework front-end) Pour accéder aux donner des certain Personnages de Star Wars et gérer l'accès utilisateur par login et mot de passe avec Le bundle MEAN.
+Projet crée avec Angular CLI (Framework front-end) Pour accéder aux donner des certains Personnages de Star Wars et gérer l'accès utilisateur par login et mot de passe avec Le bundle MEAN.
 
  
 
