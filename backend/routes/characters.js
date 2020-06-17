@@ -4,11 +4,11 @@ const CharacterController = require('../controllers/characters');
 
 const router = express.Router();
 
-router.post('/characters', CharacterController.createCharacter);
-router.get('/characters', CharacterController.listAllCharacters);
+router.post('/', CharacterController.createCharacter);
+router.get('/', CharacterController.listAllCharacters);
 
-router.get('/characters/:characterId', CharacterController.readCharacter);
-router.put('/characters/:characterId', CharacterController.updateCharacter);
-router.delete('/characters/:characterId', CharacterController.deleteCharacter);
+router.get('/:characterId', CharacterController.readCharacter);
+router.put('/:characterId', CharacterController.updateCharacter);
+router.delete('/:characterId', CharacterController.deleteCharacter);
 
 module.exports = router;

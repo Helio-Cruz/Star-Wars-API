@@ -37,25 +37,15 @@ app.use((req, res, next) => {
  
  
 app.use(bodyParser.json())
+
 /*users*/
 app.use('/api/user', userRoutes);
 
 /*films */
-app.post('/films', filmRoutes);
-app.get('/films', filmRoutes);
-
-app.get('/films/:filmId', filmRoutes);
-app.put('/films/:filmId', filmRoutes);
-app.delete('/films/:filmId', filmRoutes);
+app.use('/films', filmRoutes);
 
 /*characters*/
-
-app.post('/characters', characterRoutes);
-app.get('/characters', characterRoutes);
-
-app.get('/characters/:characterId', characterRoutes);
-app.put('/characters/:characterId', characterRoutes);
-app.delete('/characters/:characterId', characterRoutes);
+app.use('/characters', characterRoutes);
 
 module.exports = app;
 
